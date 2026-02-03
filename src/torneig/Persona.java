@@ -1,20 +1,31 @@
 package torneig;
 
+/**
+ * Representa una persona amb NIF, nom i data de naixement.
+ */
 public class Persona {
 
-    // Atributs
+    /** NIF de la persona */
     private Nif nif;
+
+    /** Nom de la persona */
     private String nom;
+
+    /** Data de naixement */
     private Data dataNaixement;
 
-    // Constructor
+    /**
+     * Constructor de la persona.
+     * @param nif NIF de la persona
+     * @param nom nom de la persona
+     * @param dataNaixement data de naixement
+     */
     public Persona(Nif nif, String nom, Data dataNaixement) {
         this.nif = nif;
         this.nom = nom;
         this.dataNaixement = dataNaixement;
     }
 
-    // Getters i setters
     public Nif getNif() {
         return nif;
     }
@@ -39,16 +50,12 @@ public class Persona {
         this.dataNaixement = dataNaixement;
     }
 
-    // Mètode útil per mostrar informació
+    /**
+     * Mostra per consola la informació de la persona.
+     */
     public void mostrarInfo() {
         System.out.println("Nom: " + nom);
         System.out.println("NIF: " + nif);
-        System.out.println("Data de naixement: " 
-            + dataNaixement.getDia() + "/" 
-            + dataNaixement.getMes() + "/" 
-            + dataNaixement.getAny());
+        System.out.println("Data de naixement: " + dataNaixement);
     }
 }
-
-   
-
